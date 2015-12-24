@@ -1,5 +1,5 @@
 ﻿/**
- * @license Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+ * Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
 
@@ -8,65 +8,37 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
 	// %REMOVE_START%
-	config.plugins =
-		'about,' +
-		'a11yhelp,' +
-		'basicstyles,' +
-		'bidi,' +
-		'blockquote,' +
-		'clipboard,' +
-		'colorbutton,' +
-		'colordialog,' +
-		'contextmenu,' +
-		'dialogadvtab,' +
-		'div,' +
-		'elementspath,' +
-		'enterkey,' +
-		'entities,' +
-		'filebrowser,' +
-		'find,' +
-		'flash,' +
-		'floatingspace,' +
-		'font,' +
-		'format,' +
-		'forms,' +
-		'horizontalrule,' +
-		'htmlwriter,' +
-		'image,' +
-		'iframe,' +
-		'indentlist,' +
-		'indentblock,' +
-		'justify,' +
-		'language,' +
-		'link,' +
-		'list,' +
-		'liststyle,' +
-		'magicline,' +
-		'maximize,' +
-		'newpage,' +
-		'pagebreak,' +
-		'pastefromword,' +
-		'pastetext,' +
-		'preview,' +
-		'print,' +
-		'removeformat,' +
-		'resize,' +
-		'save,' +
-		'selectall,' +
-		'showblocks,' +
-		'showborders,' +
-		'smiley,' +
-		'sourcearea,' +
-		'specialchar,' +
-		'stylescombo,' +
-		'tab,' +
-		'table,' +
-		'tabletools,' +
-		'templates,' +
-		'toolbar,' +
-		'undo,' +
-		'wysiwygarea';
-	// %REMOVE_END%
+	//config.startupFocus = true;
+	//config.autosave_SaveKey = 'wuzhicms';
+	//config.autosave_NotOlderThen = 1440;
+	//config.autosave_delay = 60;//自动保存延迟时间
+	//config.autosave_saveDetectionSelectors = "a[href^='javascript:__doPostBack'][id*='Save'],a[id*='Cancel']";
+	config.filebrowserBrowseUrl = '/index.php?m=attachment&f=index&v=ckeditor&action=listimage';
+	config.filebrowserUploadUrl = '/index.php?m=attachment&f=index&v=ckeditor&action=uploadimage';
+	config.uiColor = '#ffffff';
+	config.allowedContent = true;
+	config.height = 300;
+	config.toolbar_normal = [
+		{ name: 'document', items: [ 'Source', 'Preview' ] },
+		{ name: 'clipboard', items: [ 'Undo', 'Redo', '-', 'PasteText', 'PasteFromWord', 'Find', 'Replace' ] },
+		{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat' ] },
+		{ name: 'paragraph', items: [ 'NumberedList', 'BulletedList',  'Outdent', 'Indent',  'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'BidiLtr', 'BidiRtl' ] },
+		{ name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
+		{ name: 'insert', items: [ 'Image', 'Flash', 'Table',  'HorizontalRule', 'PageBreak', 'Iframe' ] },
+		{ name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
+		{ name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+		{ name: 'tools', items: ['CodeSnippet','Blockquote','ShowBlocks','Maximize' ] }
+	];
+	config.toolbar_basic = [
+		{ name: 'document', items: [ 'Source', 'Preview' ] },
+		{ name: 'clipboard', items: [ 'Undo', 'Redo'] },
+		{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat' ] },
+		{ name: 'paragraph', items: [ 'NumberedList', 'BulletedList',  'Outdent', 'Indent',  'JustifyLeft', 'JustifyCenter', 'JustifyRight'] },
+		{ name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
+		{ name: 'insert', items: ['Image', 'Table'] },
+		{ name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
+		{ name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+		{ name: 'tools', items: ['Maximize' ] }
+	];
 };
 
-// %LEAVE_UNMINIFIED% %REMOVE_LINE%
