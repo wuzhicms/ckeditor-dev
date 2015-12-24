@@ -10,10 +10,10 @@
 node_modules/**
 build/**
 
-dev/builder/release/**
-dev/builder/ckbuilder/**
-dev/langtool/po/**
-dev/langtool/cklangtool/**
+#dev/builder/release/**
+#dev/builder/ckbuilder/**
+#dev/langtool/po/**
+#dev/langtool/cklangtool/**
 
 samples/toolbarconfigurator/.bender/**
 samples/toolbarconfigurator/node_modules/**
